@@ -13,6 +13,7 @@
 		2F262353293969CF00898BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F262352293969CF00898BB6 /* Preview Assets.xcassets */; };
 		2F26235B29396A7400898BB6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26235A29396A7400898BB6 /* LocationManager.swift */; };
 		2F26235E29396C4600898BB6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26235D29396C4600898BB6 /* WelcomeView.swift */; };
+		2F2623602939755100898BB6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26235F2939755100898BB6 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2F262352293969CF00898BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F26235A29396A7400898BB6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		2F26235D29396C4600898BB6 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2F26235F2939755100898BB6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				2F26234D293969CE00898BB6 /* ContentView.swift */,
 				2F26235D29396C4600898BB6 /* WelcomeView.swift */,
+				2F26235F2939755100898BB6 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				2F26234E293969CE00898BB6 /* ContentView.swift in Sources */,
 				2F26234C293969CE00898BB6 /* DC_SwiftUI_WeatherApp.swift in Sources */,
 				2F26235B29396A7400898BB6 /* LocationManager.swift in Sources */,
+				2F2623602939755100898BB6 /* LoadingView.swift in Sources */,
 				2F26235E29396C4600898BB6 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

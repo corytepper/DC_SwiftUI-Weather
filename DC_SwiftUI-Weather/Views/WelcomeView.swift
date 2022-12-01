@@ -29,9 +29,9 @@ struct WelcomeView: View {
             }
             .cornerRadius(30)
             .symbolVariant(.fill)
-            .foregroundColor(.white)
+            
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(.white)
     }
     
     struct WelcomeView_Previews: PreviewProvider {
