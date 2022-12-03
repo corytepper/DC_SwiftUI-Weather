@@ -21,7 +21,7 @@ struct WeatherView: View {
                     
                     Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                         .fontWeight(.light)
-                }.padding(.top)
+                }.padding(.top, 60)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
@@ -39,7 +39,7 @@ struct WeatherView: View {
                         Spacer()
                         
                         Text(weather.main.feelsLike.roundDouble() + "°")
-                            .font(.system(size: 100))
+                            .font(.system(size: 80))
                             .fontWeight(.bold)
                             .padding()
                     }
@@ -63,6 +63,33 @@ struct WeatherView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
+            
+            
+            VStack {
+                Spacer()
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Weather now")
+                        .bold().padding(.bottom)
+                    
+                    HStack {
+                        WeatherRow(logo: "thermometer", name: "Min Temp", value: (weather.main.tempMin.roundDouble() + "°"))
+                        Spacer()
+                        WeatherRow(logo: "thermometer", name: "Max Temp", value: (weather.main.tempMax.roundDouble() + "°"))
+                    }
+                    HStack {
+                        WeatherRow(logo: "wind", name: "Wind speed", value: (weather.wind.speed.roundDouble() + " mph"))
+                        Spacer()
+                        WeatherRow(logo: "humidity", name: "Humidity", value: (weather.main.humidity.roundDouble() + "%"))
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .padding(.bottom, 20)
+                .foregroundColor(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+                .background(.white)
+                .cornerRadius(20, corners: [.topLeft, .topRight])
+            }
             
             
         }

@@ -9,11 +9,16 @@ import Foundation
 import CoreLocation
 
 class WeatherManager {
-    
+    // HTTP request to get the current weather depending on the coordinates we got from the location manager
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
-        guard let url = URL(string: "api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\("f07e1471e14b2181a8679192e42b3626")") else { fatalError("Missing URL")}
+//
+//        guard let url = URL(string: "api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\("5a30f958f1b24b2861d472a348990917
+//)" else { fatalError("Missing URL")}
         
-        let urlRequest = URLRequest(url:url)
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=f07e1471e14b2181a8679192e42b3626&units=imperial")
+        else { fatalError("Missing URL") }
+                            
+        let urlRequest = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
@@ -25,6 +30,7 @@ class WeatherManager {
     }
 }
 
+// Model of the response body we get from calling the open weather API
     struct ResponseBody: Decodable {
         var coord: CoordinatesResponse
         var weather: [WeatherResponse]
